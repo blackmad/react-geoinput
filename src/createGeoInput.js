@@ -32,7 +32,8 @@ const defaultOptions = {
     streetNumber: getAddressFieldFromGeoDestination('street_number', geoDestination),
     subpremise: getAddressFieldFromGeoDestination('subpremise', geoDestination),
     city: getAddressFieldFromGeoDestination('locality', geoDestination) ||
-      getAddressFieldFromGeoDestination('postal_town', geoDestination),
+      getAddressFieldFromGeoDestination('postal_town', geoDestination) ||
+      getAddressFieldFromGeoDestination('sublocality_level_1', geoDestination),
     country: getAddressFieldFromGeoDestination('country', geoDestination),
     postalCode: getAddressFieldFromGeoDestination('postal_code', geoDestination),
     // if location is empty it'll be "_.Q" object
